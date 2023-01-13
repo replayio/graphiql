@@ -19,4 +19,12 @@ jobs:
       - run: yarn install --frozen-lockfile --immutable
 
       - name: Run E2E suite
-        run: yarn e2e
+        run: yarn e2e:replay
+        env:
+          RECORD_REPLAY_METADATA_FILE: /tmp/replay-metadata
+
+      - name: Upload replays
+        if: ${{ always() }}
+        uses: replayio/action-upload@v0.4.7
+        with:
+          api-key: rwk_tuo6kepOi7xI7oOFJzylf2GNqql3CMOgeCsGtAwuyhf

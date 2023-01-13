@@ -49,6 +49,7 @@
     "cypress-open": "yarn workspace graphiql cypress-open",
     "dev-graphiql": "yarn workspace graphiql dev",
     "e2e": "yarn run e2e:build && yarn workspace graphiql e2e",
+    "e2e:replay": "yarn run e2e:build && yarn workspace graphiql e2e:replay",
     "e2e:build": "yarn build && yarn workspace graphiql run build-bundles-min",
     "eslint": "eslint --ext=ts,js,jsx,tsx .",
     "format": "yarn eslint --fix && yarn pretty",

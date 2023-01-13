@@ -45,6 +45,7 @@
     "cypress-open": "yarn e2e-server 'cypress open'",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config resources/webpack.config.js",
     "e2e": "yarn e2e-server 'cypress run'",
+    "e2e:replay": "yarn e2e-server \"cypress run --browser='Replay Chromium'\"",
     "e2e-server": "start-server-and-test 'cross-env PORT=8080 node test/e2e-server' 'http-get://localhost:8080/graphql?query={test { id }}'",
     "storybook": "start-storybook",
     "webpack": "webpack --config resources/webpack.config.js"
